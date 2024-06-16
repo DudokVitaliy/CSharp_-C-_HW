@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            /*
+            
             Console.WriteLine("\t\tN1");
             Console.WriteLine("It's easy to win forgiveness for being wrong;\nbeing right is what gets you into real trouble.\nBjarne Stroustrup");
             
@@ -50,14 +50,59 @@
             int e = num / 10 % 10;
             int f = num % 10;
             Console.WriteLine("\tReverse: \t" + f + e + d + c + b + a);
-            */
+            
             Console.WriteLine("\t\tN4");
-            Console.Write("\tEnter start: \t"); int range_1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("\tStart: \t0"); 
             Console.Write("\tEnter end: \t"); int range_2 = int.Parse(Console.ReadLine());
             Console.WriteLine("\tResult: ");
-            while (range_1 > range_2)
+            int range_1 = 0;
+            int number1 = 0;
+            int number2 = 1;
+            Console.WriteLine("Result: ");
+            Console.Write( $"{number1}; {number2}; ");
+            while ((number1 + number2) < range_2)
             {
-                
+                range_1 = (number1 + number2);
+                Console.Write(range_1 + "; ");
+                number1 = number2;
+                number2 = range_1;
+            }
+            Console.WriteLine();
+            
+            Console.WriteLine("\t\tN5");
+            Console.Write("\tEnter start: \t"); int start = int.Parse(Console.ReadLine());
+            Console.Write("\tEnter end: \t"); int end = int.Parse(Console.ReadLine());
+            for (int i = start; i <= end; i++)
+            {
+                for (int j = 0; j < i; j++)
+                {
+                    Console.Write(i);
+                }
+                Console.WriteLine();
+            }
+            
+            Console.WriteLine("\t\tN6");
+            Console.Write("\tEnter symbol: \t"); string symb = Console.ReadLine();
+            Console.Write("\tEnter length: \t"); int length = int.Parse(Console.ReadLine());
+            Console.Write("\tSelect direction (- or |): \t"); string dir = Console.ReadLine();
+            if (dir == "-")
+            {
+                for (int i = 0; i < length; i++)
+                {
+                    Console.Write(symb);
+                }
+                Console.WriteLine();
+            }
+            else if (dir == "|")
+            {
+                for (int i = 0; i < length; i++)
+                {
+                    Console.WriteLine(symb);
+                }
+            }
+            else
+            {
+                Console.WriteLine("Error! Wrong direction!");
             }
         }
     }
