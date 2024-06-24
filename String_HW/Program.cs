@@ -6,7 +6,7 @@
     {
         static void Main(string[] args)
         {
-            /*
+            
             WriteLine("N1");
             Write("Enter first line: ");
             string str_1 = ReadLine();
@@ -119,18 +119,16 @@
             {
                 if (str_5[i].Length == length)
                 {
-                    for (int j = 0; j < length; j++)
+                    for (int x = 0; x < length; x++)
                     {
-                        symbols[j] = str_5[i][j];
+                        symbols[x] = str_5[i][x];
                     }
                     symbols[length - 1] = '$';
                     symbols[length - 2] = '$';
                     symbols[length - 3] = '$';
-                    for (int j = 0; j < length; j++)
-                    {
-                        str_5[i] = "";
-                        str_5[i] = string.Join("", symbols);
-                    }
+                    str_5[i] = "";
+                    str_5[i] = string.Join("", symbols);
+
 
                 }
             }
@@ -160,7 +158,7 @@
             string[] words_3 = str_7.Split(new char[] { ' ', ',', '.', ':', '!', '?', '-', '/' }, StringSplitOptions.RemoveEmptyEntries);
             string str_8 = string.Join('*', words_3);
             WriteLine("Result: " + str_8);
-            */
+            
             WriteLine("N7");
             StringBuilder new_builder = new StringBuilder();
             WriteLine("\tEnter words: ");
