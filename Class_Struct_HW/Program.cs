@@ -111,10 +111,6 @@
         }
         static void Main(string[] args)
         {
-            //Worker worker = new Worker();
-            //worker.Print();
-            //Fill(out worker);
-            //worker.Print();
             Worker[] workers = new Worker[2];
             for (int i = 0; i < workers.Length; i++)
             {
