@@ -32,6 +32,7 @@
         }
         public override void Print()
         {
+            Console.WriteLine("\tTriangle");
             Console.WriteLine($"Side A = {SideA}\tSide B = {SideB}\tSide C = {SideC}");
         }
     }
@@ -49,6 +50,7 @@
         }
         public override void Print()
         {
+            Console.WriteLine("\tSquare");
             Console.WriteLine($"Side A = {SideA}");
         }
 
@@ -72,6 +74,7 @@
         }
         public override void Print()
         {
+            Console.WriteLine("\tDiamond");
             Console.WriteLine($"Diagonal A = {DiagA}\tDiagonal B = {DiagB}");
         }
     }
@@ -92,6 +95,7 @@
         }
         public override void Print()
         {
+            Console.WriteLine("\tRectangle");
             Console.WriteLine($"Side A = {SideA}\tSide B = {SideB}");
         }
     }
@@ -113,6 +117,7 @@
         }
         public override void Print()
         {
+            Console.WriteLine("\tParalelogram");
             Console.WriteLine($"Side A = {SideA}\tSide B = {SideB}\tHeigth = {Heigth}");
         }
     }
@@ -122,12 +127,11 @@
         public double SideC { get; set; }
         public double SideD { get; set; }
         public double Heigth { get; set; }
-        public Trapeze(double a, double b, double h) : base(a)
+        public Trapeze(double a, double b, double c, double d, double h) : base(a)
         {
             SideB = b;
-            SideB = b;
-            SideB = b;
-            SideB = b;
+            SideC = c;
+            SideD = d;
             Heigth = h;
         }
         public override double GetArea()
@@ -140,14 +144,72 @@
         }
         public override void Print()
         {
-            Console.WriteLine($"Side A = {SideA}\tSide B = {SideB}\tHeigth = {Heigth}");
+            Console.WriteLine("\tTrapeze");
+            Console.WriteLine($"Side A = {SideA}\tSide B = {SideB}\tSide C = {SideC}\tSide D = {SideD}\tHeigth = {Heigth}");
         }
     }
+    class Circle : Figure
+    {
+        public Circle(double a) : base(a) { }
+        public override double GetArea()
+        {
+            return 3.14 * (SideA * SideA);
+        }
+        public override double GetPerimeter()
+        {
+            return 2 * 3.14 * SideA;
+        }
+        public override void Print()
+        {
+            Console.WriteLine("\tCircle");
+            Console.WriteLine($"Radius = {SideA}");
+        }
+    }
+    class Ellipse : Figure
+    {
+        public double SideB { get; set; }
+        public Ellipse(double a, double b) : base(a) 
+        {
+            SideB = b;
+        }
+        public override double GetArea()
+        {
+            return 3.14 * (SideA * SideB);
+        }
+        public override double GetPerimeter()
+        {
+            return 4 * ((3.14 * SideA * SideB + (SideA - SideB)) / (SideA + SideA));
+        }
+        public override void Print()
+        {
+            Console.WriteLine("\tEllipse");
+            Console.WriteLine($"Semiaxis A = {SideA}\t Semiaxis B = {SideB}");
+        }
+    }
+    class CompositeFigure
+    {
+        Figure[] figures;
+        public CompositeFigure(params Figure[] f)
+        {
+            figures = f;
+        }
+        public void Print()
+        {
+            Console.WriteLine("\t\tAll elements:");
+            foreach (var item in figures)
+            {
+                item.Print();
+            }
+        }
+    }
+
     internal class Program
     {
         static void Main(string[] args)
         {
-
+            CompositeFigure comp_fig = new CompositeFigure ( new Triangle ( 1, 1, 1 ), new Square(2), new Diamond(3,3), new Rectangle(4,4), 
+                new Paralelogram(5,5,5), new Trapeze(6,6,6,6,6), new Circle(7), new Ellipse(8,8));
+            comp_fig.Print();
         }
     }
 }
