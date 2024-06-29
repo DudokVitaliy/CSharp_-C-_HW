@@ -129,7 +129,6 @@
             {
                 WriteLine("Error! Wrong data!");
             }
-            
             WriteLine("\tN2");
             CreditCard card = new CreditCard();
             card.Print();
