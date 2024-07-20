@@ -13,11 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "String_HW", "String_HW\Stri
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP_intro_HW", "OOP_intro_HW\OOP_intro_HW.csproj", "{461F73AD-EDC5-472D-8836-5E9864C2B1F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overloading_Operators_HW", "Overloading_Operators_HW\Overloading_Operators_HW.csproj", "{8EB4B028-547C-48C6-8807-F0B507F5C06E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Overloading_Operators_HW", "Overloading_Operators_HW\Overloading_Operators_HW.csproj", "{8EB4B028-547C-48C6-8807-F0B507F5C06E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritence_HW", "Inheritence_HW\Inheritence_HW.csproj", "{972E3F29-12CF-454C-A4AE-DA75997F0815}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inheritence_HW", "Inheritence_HW\Inheritence_HW.csproj", "{972E3F29-12CF-454C-A4AE-DA75997F0815}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Class_Struct_HW", "Class_Struct_HW\Class_Struct_HW.csproj", "{CB8C9C75-6284-461B-B2AA-5DA60BD23019}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Class_Struct_HW", "Class_Struct_HW\Class_Struct_HW.csproj", "{CB8C9C75-6284-461B-B2AA-5DA60BD23019}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces_HW", "Interfaces_HW\Interfaces_HW.csproj", "{98DBFFAF-75CE-4502-9247-C1B43C880FD0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{CB8C9C75-6284-461B-B2AA-5DA60BD23019}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CB8C9C75-6284-461B-B2AA-5DA60BD23019}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CB8C9C75-6284-461B-B2AA-5DA60BD23019}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98DBFFAF-75CE-4502-9247-C1B43C880FD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98DBFFAF-75CE-4502-9247-C1B43C880FD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98DBFFAF-75CE-4502-9247-C1B43C880FD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98DBFFAF-75CE-4502-9247-C1B43C880FD0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
